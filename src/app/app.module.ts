@@ -10,8 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ListeMatiereComponent } from './liste-matiere/liste-matiere.component';
 import { DetailsMatiereComponent } from './details-matiere/details-matiere.component';
+import { ListeCoursComponent } from './liste-cours/liste-cours.component';
 
 const routes: Routes = [
+  {
+    path: 'listeCours/:idProf',
+    component: ListeCoursComponent
+  },
   {
     path: 'detailsMatiere/:idMatiere',
     component: DetailsMatiereComponent
@@ -30,7 +35,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     ListeMatiereComponent,
-    DetailsMatiereComponent
+    DetailsMatiereComponent,
+    ListeCoursComponent
   ],
   imports: [
     BrowserModule,
