@@ -9,8 +9,13 @@ import { LoginComponent } from './login/login.component';
 
 import { FormsModule } from '@angular/forms';
 import { ListeMatiereComponent } from './liste-matiere/liste-matiere.component';
+import { DetailsMatiereComponent } from './details-matiere/details-matiere.component';
 
 const routes: Routes = [
+  {
+    path: 'detailsMatiere/:idMatiere',
+    component: DetailsMatiereComponent
+  },
   {
     path: 'listeMatiere/:idEtudiant',
     component: ListeMatiereComponent
@@ -24,7 +29,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    ListeMatiereComponent
+    ListeMatiereComponent,
+    DetailsMatiereComponent
   ],
   imports: [
     BrowserModule,
