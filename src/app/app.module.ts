@@ -11,8 +11,18 @@ import { FormsModule } from '@angular/forms';
 import { ListeMatiereComponent } from './liste-matiere/liste-matiere.component';
 import { DetailsMatiereComponent } from './details-matiere/details-matiere.component';
 import { ListeCoursComponent } from './liste-cours/liste-cours.component';
+import { ListeDevoirComponent } from './liste-devoir/liste-devoir.component';
+import { DetailsDevoirComponent } from './details-devoir/details-devoir.component';
 
 const routes: Routes = [
+  {
+    path: 'detailsDevoir/:idDevoir',
+    component: DetailsDevoirComponent
+  },
+  {
+    path: 'listeDevoirs/:idProf',
+    component: ListeDevoirComponent
+  },
   {
     path: 'listeCours/:idProf',
     component: ListeCoursComponent
@@ -36,7 +46,9 @@ const routes: Routes = [
     LoginComponent,
     ListeMatiereComponent,
     DetailsMatiereComponent,
-    ListeCoursComponent
+    ListeCoursComponent,
+    ListeDevoirComponent,
+    DetailsDevoirComponent
   ],
   imports: [
     BrowserModule,

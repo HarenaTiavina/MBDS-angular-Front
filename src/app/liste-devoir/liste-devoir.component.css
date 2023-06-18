@@ -1,0 +1,48 @@
+.breadcrumb {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  .breadcrumb li {
+    display: inline;
+  }
+  .breadcrumb li:not(:last-child):after {
+    content: " / ";
+  }
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .status-green {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .status-red {
+    background-color: #FF0000;
+    color: white;
+  }
