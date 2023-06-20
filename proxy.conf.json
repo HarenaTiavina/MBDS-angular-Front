@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://harena-1-nicolas-10-api.onrender.com/",
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }
+  

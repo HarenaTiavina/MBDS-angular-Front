@@ -13,6 +13,7 @@ import { DetailsMatiereComponent } from './details-matiere/details-matiere.compo
 import { ListeCoursComponent } from './liste-cours/liste-cours.component';
 import { ListeDevoirComponent } from './liste-devoir/liste-devoir.component';
 import { DetailsDevoirComponent } from './details-devoir/details-devoir.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -51,6 +52,7 @@ const routes: Routes = [
     DetailsDevoirComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -44,4 +44,18 @@ export class AppComponent {
     }
     return this.authService.loggedIn;
   }
+
+  loggedEtudiant() {
+    if(this.authService.loggedIn) {
+      this.nom = "etudiant";
+    }
+    return this.authService.loggedIn;
+  }
+
+  loggedProf() {
+    if(this.authService.loggedIn) {
+      this.nom = "prof";
+    }
+    return this.authService.loggedIn;
+  }
 }
