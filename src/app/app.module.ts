@@ -14,8 +14,13 @@ import { ListeCoursComponent } from './liste-cours/liste-cours.component';
 import { ListeDevoirComponent } from './liste-devoir/liste-devoir.component';
 import { DetailsDevoirComponent } from './details-devoir/details-devoir.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreationDevoirComponent } from './creation-devoir/creation-devoir.component';
 
 const routes: Routes = [
+  {
+    path: 'createDevoir/:idMatiere',
+    component: CreationDevoirComponent
+  },
   {
     path: 'detailsDevoir/:idDevoir',
     component: DetailsDevoirComponent
@@ -49,7 +54,8 @@ const routes: Routes = [
     DetailsMatiereComponent,
     ListeCoursComponent,
     ListeDevoirComponent,
-    DetailsDevoirComponent
+    DetailsDevoirComponent,
+    CreationDevoirComponent
   ],
   imports: [
     HttpClientModule,
