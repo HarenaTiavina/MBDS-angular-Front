@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  erreurConnexion: string='';
+
   constructor(private http: HttpClient, private router: Router) { }
 
   login(form: NgForm) {
@@ -25,12 +27,10 @@ export class LoginComponent {
           console.log(response.status);
           if (response.status === 200) {
             this.router.navigate(['/listeMatiere/:idEtudiant']);
-          } else {
-            console.log("erreur pory")
-          }
+          } 
         }, error => {
           console.error(error);
-          console.log("erreur pory 2")
+          this.erreurConnexion = 'Erreur de connexion';
         });
     }
   }

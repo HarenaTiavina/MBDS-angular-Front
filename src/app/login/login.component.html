@@ -13,5 +13,6 @@
       <div class="form-group">
         <input type="submit" value="Se connecter">
       </div>
+      <div class="erreur-connexion" *ngIf="erreurConnexion !== ''">{{ erreurConnexion }}</div>
     </form>
   </div>
