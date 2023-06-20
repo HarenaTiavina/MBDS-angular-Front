@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./details-devoir.component.css']
 })
 export class DetailsDevoirComponent {
+  idUser: string = 'eleve';
 
+  fichierUrl(): string {
+    const nom= 'devoir.${this.idUser}.txt';
+    return 'assets/${nom}';
+  }
 }

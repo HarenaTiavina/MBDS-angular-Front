@@ -14,9 +14,10 @@
   </div>
 </header>
 <ul class="navbar">
-  <li ><a href="/login">Login</a></li>
-  <li><a href="/listeMatiere/:idEtudiant">Liste Matière (étudiant)</a></li>
-  <li><a href="/listeCours/:idProf">Liste Cours (prof)</a></li>
+  <li *ngIf="!isLogged()"><a href="/login">Login</a></li>
+  <li *ngIf="isLogged()"><a href="/login" (click)="logout()">Logout</a></li>
+  <li *ngIf="isEtudiant()"><a href="/listeMatiere/:idEtudiant">Liste Matière </a></li>
+  <li *ngIf="isProf()"><a href="/listeCours/:idProf">Liste Cours (prof)</a></li>
 </ul>
 <body>
   <div class="container">
