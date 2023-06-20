@@ -7,9 +7,6 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'scolarite';
-  labelConnexion = "Se connecter";
-  nom:string = "";
   currentRoute:string = "";
 
   constructor(private authService:AuthService, 
@@ -22,40 +19,5 @@ export class AppComponent {
         this.currentRoute = event.url;
       }
     });
-  }
-
-
-  login() {
-    // utilise l'authService pour se connecter
-    if(!this.authService.loggedIn) {
-      this.authService.logIn();
-      // on change le label du bouton
-      this.labelConnexion = "Se déconnecter";
-    } else {
-      this.authService.logOut();
-      // et on navigue vers la page d'accueil
-      this.router.navigate(["/"]);
-    }
-  }
-
-  isLogged() {
-    if(this.authService.loggedIn) {
-      this.nom = "Michel Buffa";
-    }
-    return this.authService.loggedIn;
-  }
-
-  loggedEtudiant() {
-    if(this.authService.loggedIn) {
-      this.nom = "etudiant";
-    }
-    return this.authService.loggedIn;
-  }
-
-  loggedProf() {
-    if(this.authService.loggedIn) {
-      this.nom = "prof";
-    }
-    return this.authService.loggedIn;
   }
 }
